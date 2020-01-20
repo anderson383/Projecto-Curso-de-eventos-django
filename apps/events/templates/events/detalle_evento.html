@@ -1,0 +1,71 @@
+{% extends "events/base.html" %}
+
+{% block titulo %}
+Detalle Evento
+{% endblock titulo %}
+
+{% block cont_prin %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col">
+            <a name="" id="" class="btn btn-outline-primary" href="#" role="button">Regresar</a>
+            <h3 class="d-inline">Evento:{{ evento.name }}</h3>
+        </div>
+    </div>
+</div>
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+    <div class="container ">
+        <div class="row">
+            <div class="col-12 card">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img class="card-img-top" src="{{ evento.image.url }}" alt="">
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card-body">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <td>{{ evento.name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Categoria</th>
+                                        <td>{{ evento.category }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Contenido</th>
+                                        <td>{{ evento.content }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Start/Finish</th>
+                                        <td>{{ evento.start }} / {{ evento.finish }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Lugar</th>
+                                        <td>{{ evento.place }}</td>
+                                    </tr>
+                                    <tr>
+                                        {% if evento.is_free %}
+                                        <th>Costo</th>   
+                                        <td>
+                                            <button class="btn btn-secondary btn-small" >Gratuito</button >
+                                        </td> 
+                                        {% else %}
+                                            <th>Costo</th>
+                                            <td>{{ evento.amount }}</td>
+                                        {% endif %}
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock cont_prin %}

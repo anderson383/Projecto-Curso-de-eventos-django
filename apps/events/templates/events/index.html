@@ -1,0 +1,76 @@
+{% extends "events/base.html" %}
+{% block titulo %}Home{% endblock titulo %}
+
+{% block cont_prin %}
+<div class="pt-2 mt-5">
+    <div class="jumbotron py-4 text-center ">
+        <h1 class="display-4">Eventus</h1>
+        <p class="">More info
+        <a href="{% url 'login' %}" >Registrate</a>
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h4>Eventos disponibles</h4>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+              <select class="form-control" name="" id="">
+                <option>Categorias</option>
+                <option></option>
+                <option></option>
+              </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+              <select class="form-control" name="" id="">
+                <option>Tipo de pago</option>
+                <option></option>
+                <option></option>
+              </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="input-group shadow-sm">
+                <span class="input-group-btn">
+                    <button class="btn btn-outline-primary btn-buscar" id="" type="button">Buscar</button>
+                </span>
+                <input type="text" class="form-control form-control-p" id="txtCod" placeholder="Busca el evento de tu gusto">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        {% for even in events %}
+            <div class="card  col-lg-3 p-2">
+                <img class="card-img-top" src="{{ even.image.url }}" alt="" style="width: 100%;">
+                <div class="card-body">
+                    <h4 class="card-title"> <a href="">{{ even.name }}</a></h4>
+                    <small class="text-muted">{{ even.start }}</small>
+                    <p class="card-text">{{ even.place }}</p>
+                    <small class="text-muted">{{ even.views }}</small>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>Categorias relacionadas</h2>
+        </div>
+    </div>
+    <div class="row">
+        {% for category in categories %}
+        <div class="card col-md-6 col-lg-4">
+            <a href="" class="btn btn-outline-success">{{ category.name }}</a>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock cont_prin %}

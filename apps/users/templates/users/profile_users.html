@@ -1,0 +1,89 @@
+{% extends "events/base.html" %}
+{% block titulo %}Registro{% endblock titulo %}
+
+{% block cont_prin %}
+<div class="container-fluid mt-5 pt-4  bg-gray">
+    <div class="row">
+        <div class="col-12 col-lg-3">
+            <div class="card text-left shadow-sm  ">
+                {% if user.avatar.url|length > 0 %}
+                    <img class="card-img-top" src="{{ user.avatar.url }}" alt="">
+                {% endif %}
+              <div class="text-center">
+                    <img src="img/foto.jpg" alt="" class="rounded-circle subir shadow-sm" width="150px">
+              </div>
+              <div class="card-body  text-center p-1 pb-3">
+                <h4 class="card-title mt-0">{{ user.first_name }} {{ user.last_name }}</h4>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam dolore assumenda repellat, eos id rerum neque quod cumque non delectus.</p>
+                <button type="button" class="btn  primary">Contactar</button>
+                </div>
+            </div>
+            <div class="card text-left my-3 shadow-sm">
+              <div class="card-header ">
+                  <h4>Skere</h4>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Lorem ipsum dolor sit.</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, laborum.</p>
+              </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="card">
+                <ul class="list-group list-group-flush bg-gray">
+                    <li class="list-group-item p-3 mb-1 border-0 shadow-sm">
+                        <div class="row">
+                            <div class="col-2 col-sm-1 col-lg-1 p-0 text-center">
+                                <img src="img/foto.jpg" alt="" class="rounded-circle border" width="50px">
+                            </div>
+                            <div class="col-10 col-sm-11 col-lg-11 clearfix">
+                                <input type="text" name="" id="" placeholder="Publica algo nuevo" class="form-control borde-rosa">
+                                <input type="button" value="Publicar " class="btn primary mt-2 float-right">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-3 mb-1 mt-1 border-0 shadow-sm">
+                        <div class="row">
+                            <div class="col-2 col-sm-1 col-lg-1 p-0 text-center">
+                                <img src="img/foto.jpg" alt="" class="rounded-circle border" width="50px">
+                            </div>
+                            <div class="col-10 col-sm-11 col-lg-11 clearfix">
+                                <p class="card-text float-right"><small class="text-muted">Hace 3 minutos</small></p>
+                                <h5>Contenido</h5>
+                                <p>Lorem iusantium autem impedit? Similique corrupti itaque ab, reprehenderit quibusdam dolores. Ipsa tempore accusamus dicta laboriosam aperiam ratione enim est necessitatibus consectetur facere animi laudantium magni eligendi porro inventore perferendis, rem nam labore et laborum ut adipisci. Alias cum vero corporis dolores.</p>
+                                <a href="#" class="btn btn-outline-primary">Ir al post</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-3 my-1 border-0 shadow-sm">
+                        <div class="row">
+                            <div class="col-2 col-sm-1 col-lg-1 p-0 text-center">
+                                <img src="img/foto.jpg" alt="" class="rounded-circle border" width="50px">
+                            </div>
+                            <div class="col-10 col-sm-11 col-lg-11 clearfix">
+                                <p class="card-text float-right"><small class="text-muted">Hace 3 minutos</small></p>
+                                <h5>Contenido</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus accusantium autem impedit? Similique corrupti itaque ab, reprehenderit quibusdam dolores. Ipsa tempore accusamus dicta laboriosam aperiam ratione enim est necessitatibus consectetur facere animi laudantium magni eligendi porro inventore perferendis, rem nam labore et laborum ut adipisci. Alias cum vero corporis dolores.</p>
+                                <a href="#" class="btn btn-outline-primary">Ir al post</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item p-3 mb-3 my-1 border-0 shadow-sm">
+                        <div class="row">
+                            <div class="col-2 col-sm-1 col-lg-1 p-0 text-center">
+                                <img src="img/foto.jpg" alt="" class="rounded-circle border" width="50px">
+                            </div>
+                            <div class="col-10 col-sm-11 col-lg-11 clearfix">
+                                <p class="card-text float-right"><small class="text-muted">Hace 3 minutos</small></p>
+                                <h5>Contenido</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus accusantium autem impedit? Similique corrupti itaque ab, reprehenderit quibusdam dolores. Ipsa tempore accusamus dicta laboriosam aperiam ratione enim est necessitatibus consectetur facere animi laudantium magni eligendi porro inventore perferendis, rem nam labore et laborum ut adipisci. Alias cum vero corporis dolores.</p>
+                                <a href="#" class="btn btn-outline-primary">Ir al post</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock cont_prin %}

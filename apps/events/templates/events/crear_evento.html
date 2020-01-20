@@ -1,0 +1,26 @@
+{% extends "events/base.html" %}
+
+{% block titulo %}
+Nuevo Evento
+{% endblock titulo %}
+
+{% block cont_prin %}
+    <div class="container mt-5 pt-5">
+        <hr>
+        <div class="row">
+            <div class="col-lg-3">
+                <a name="" id="" class="btn btn-outline-primary" href="#" role="button">Regresar</a>
+                <h3 class="d-inline">Crear Evento</h3>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <h5>Ingresa los datos de tu evento y compartelo con todos tus conocidos o amigos</h5>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        {% include 'events/form_base.html' %}
+    </div>
+{% endblock cont_prin %}

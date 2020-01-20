@@ -1,0 +1,57 @@
+{% extends "events/base.html" %}
+{% block titulo %}Registro{% endblock titulo %}
+
+{% block cont_prin %}
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-lg-6 card">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 py-3">
+                            <div class="form-group">
+                                <button type="button"class="btn btn-primary btn-block" >Registrate con facebook</button>
+                                <button type="button"class="btn btn-danger mt-2 btn-block" >Registrate con Gmail</button>
+                            </div><!--form-group-->
+                            <div class="form-group">
+                                <label for="">{{ form.username.label_tag }}</label>
+                                {{ form.username }}
+                            </div><!--form-group-->
+                            <div class="form-group">
+                                <label for="">{{ form.email.label_tag }}</label>
+                                {{ form.email }}
+                            </div><!--form-group-->
+                            <div class="form-group">
+                                <label for="">{{ form.password.label_tag }}</label>
+                                {{ form.password }}
+                            </div><!--form-group-->
+                            <div class="form-group">
+                                <button name ="register_user" class="btn btn-outline-primary btn-block" >Registrarse</button>
+                            </div><!--form-group-->
+                        </div>
+                    </div><!--Row-->
+                </form><!--Form-->
+            </div>
+            <div class="col-lg-6 card">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 py-3">
+                            <div class="form-group">
+                                <label for="">Usuario:</label>
+                                {{ login_form.username }}
+                            </div><!--form-group-->
+                            <div class="form-group">
+                                <label for="">Contraseña:</label>
+                                {{ login_form.password }}
+                            </div><!--form-group-->
+                            <div class="form-group">
+                                <button name ="login_user"class="btn btn-outline-primary btn-block" >Login</button>
+                            </div><!--form-group-->
+                        </div>
+                    </div><!--Row-->
+                </form><!--Form-->
+            </div>
+        </div>
+    </div>
+{% endblock cont_prin %}

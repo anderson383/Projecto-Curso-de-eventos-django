@@ -1,0 +1,45 @@
+.primary{
+    background-color: #4300D2 !important;
+    color: white !important;
+}
+.btn-outline-primary{
+    border: 1px solid  #4300D2;
+    color:  #4300D2;
+}
+.btn-buscar{
+    border-radius: 4px 0 0 4px;
+}
+.btn-outline-primary:hover{
+    border: 1px solid  #4300D2;
+    background-color: #4300D2 !important;
+    color: white;
+}
+.enlace{
+    background: #1d2124;
+    border: 1px solid  #4300D2;
+}
+.enlace:hover{
+    background: #4e575e !important;
+}
+.text-primary{
+    color:  #4300D2 !important;
+}
+.bg-gray{
+    background-color: #ddd5f5;
+
+}
+.borde-rosa:focus{
+    border: 2px solid #4300D2;
+    box-shadow: none !important;
+}
+
+.parallax {
+    background-image: url("../img/fondo3.jpg");
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .fondo-tras{
+      background-color: rgba(0, 0, 0, 0.26);
+  }

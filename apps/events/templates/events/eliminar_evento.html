@@ -1,0 +1,28 @@
+{% extends "events/base.html" %}
+
+{% block titulo %}
+Eliminar Evento
+{% endblock titulo %}
+
+{% block cont_prin %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col">
+            <a name="" id="" class="btn btn-outline-primary" href="{% url 'panel' %}" role="button">Regresar</a>
+            <h3 class="d-inline">Eliminar el evento: {{ evento.name }}</h3>
+        </div>
+    </div>
+</div>
+    <div class="container ">
+        <div class="row">
+            <div class="col card">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <label for="">Desea eliminar el evento?:{{ evento.name }}</label>
+                    <button class="btn btn-danger">Si</button>
+                    <a class="btn btn-warning" href="{% url 'panel' %}">No</a>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock cont_prin %}

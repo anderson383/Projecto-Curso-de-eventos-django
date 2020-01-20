@@ -1,0 +1,21 @@
+{% extends "events/base.html" %}
+
+{% block titulo %}
+Editar Evento
+{% endblock titulo %}
+
+{% block cont_prin %}
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col">
+            <a name="" id="" class="btn btn-outline-primary" href="{% url 'panel' %}" role="button">Regresar</a>
+            <h3 class="d-inline">Evento: {{ evento.name }}</h3>
+        </div>
+    </div>
+</div>
+    <div class="container ">
+        <div class="row">
+            {% include 'events/form_base.html' %}
+        </div>
+    </div>
+{% endblock cont_prin %}
